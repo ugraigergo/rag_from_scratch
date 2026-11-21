@@ -1,4 +1,4 @@
-from rag import chunk_text, embed
+from rag import chunk_text, embed, cosine_similarity
 
 def test_short_text_single_chunk():
     assert chunk_text("hello", 500, 100) == ["hello"]
