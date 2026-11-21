@@ -64,3 +64,16 @@ Context:
 
 Question: {query}
 Answer:"""
+
+def generate(prompt: str)->str:
+    url = "http://localhost:11434/api/chat"
+    payload = {
+        "model": "llama3",
+        "messages": [{"role": "user", "content": prompt}],
+        "stream": False,
+    }
+    response = requests.post(url, json=payload)
+    response.raise_for_status()
+    data = response.json()
+
+    return data["message"]["content"]
