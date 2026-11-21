@@ -84,3 +84,14 @@ def answer(query: str, index, top_k: int = 3)-> str:
     prompt = build_prompt(query, context_chunks)
 
     return generate(prompt)
+
+
+def load_text_file(path: str)->str:
+    with open(path, encoding="utf-8") as f:
+
+        return f.read()
+
+import re
+def split_sentences(text: str)->list[str]:
+    parts = re.split(r"(?<=[.!?])\s+", text)
+    return [p.strip() for p in parts if p.strip()]

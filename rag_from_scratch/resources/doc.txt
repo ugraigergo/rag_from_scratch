@@ -1,0 +1,50 @@
+Artificial Intelligence MSc student specialising in AI and data-driven
+solutions. My professional focus is the secure, scalable, enterprise-grade
+application of autonomous agent architectures (Agentic AI), locally
+hosted large language models (Local LLM) and state-of-the-art computer
+vision (Edge AI).
+PROFESSIONAL PROJECTS
+Python, Local LLM, Prompt Engineering, SQL
+Local AI CV Data Extractor
+Fully offline, high-performance hybrid microservice architecture for
+processing CVs. Driven by a locally hosted large language model, the
+system extracts relevant professional data from unstructured PDF
+documents and stores it in a relational database. The solution eliminates
+cloud API costs and guarantees 100% data privacy for recruitment
+systems.
+Python, OpenCV, YuNet, Edge AI, Pose Estimation
+FocusEdge – Classroom Attention Analytics
+Portable, Edge AI-based real-time attention monitoring system for
+educational environments. A locally running neural network (YuNet)
+detects faces, after which classical computer vision algorithms and spatial
+pose estimation analyse head orientation. The hybrid system visualises
+group-level attention in real time with a 2-second refresh rate.
+Python, OpenCV, Image Processing
+Car Compositor
+Automated image processing and compositing solution for the visual
+presentation of vehicles. The script manipulates input image data to
+generate optimised, layered output, significantly accelerating the
+production workflow.
+n8n, Workflow Automation, Data Processing, ETL
+Automated Reporting Pipeline (n8n)
+Design and implementation of a standalone data processing and
+automated reporting workflow in an n8n environment. The system
+performs aggregation and data validation across large, complex tabular
+data sources and generates monthly analytical summaries, reducing
+manual administration to a minimum.
+React, Django, Python, REST API, Database Design
+BSc Thesis – AI-Accelerated Social Media Platform
+Architected and built a modern, scalable web application using React for
+the frontend and Django (Python) for the backend. Designed and
+implemented robust REST API endpoints and relational database models to
+handle seamless data flow. Utilised advanced AI tools as a development
+accelerator, shifting focus from raw syntax typing to high-level system
+architecture, clean code principles and efficient integration.
+CERTIFICATIONS & ACTIVITIES
+NVIDIA Certification
+Building LLM Applications With Prompt Engineering Certification
+Credential ID: g-2IIRd1RO6ZWcYuaAXLtA
+DEIK.AI Challenge 2026
+Active participant in the competition with the FocusEdge project,
+alongside neuromorphic and agent-based (Agentic) research
+assignments.
