@@ -77,3 +77,10 @@ def generate(prompt: str)->str:
     data = response.json()
 
     return data["message"]["content"]
+
+def answer(query: str, index, top_k: int = 3)-> str:
+    results = retrieve(query, index, top_k)
+    context_chunks = [chunk for score, chunk in results]
+    prompt = build_prompt(query, context_chunks)
+
+    return generate(prompt)
