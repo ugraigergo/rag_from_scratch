@@ -1,17 +1,15 @@
-from rag import load_text_file, chunk_text, build_index, answer, retrieve, chunk_by_sentences
+from rag import load_text_file, chunk_text, build_index, answer, retrieve, chunk_by_sentences, save_index, load_index
+import os
 
-text = load_text_file("./resources/doc.txt")
-chunks = chunk_by_sentences(text, max_chars=400)
-print(len(chunks), "chunks")
-index = build_index(chunks)
+INDEX_PATH = "index.json"
 
-questions = [
-    "What does FocusEdge do?",
-    "Which certification does Gergő have?",
-    "What stack was used for the BSc thesis?",
-    "What is Gergő's favorite food?",
-]
-for q in questions:
-    print(q)
-    print(answer(q, index, top_k=7))
-    print()
+if(os.path.exists(INDEX_PATH)):
+    index = load_index(INDEX_PATH)
+else:
+    text = load_text_file("./resources/doc.txt")
+    chunks =chunk_by_sentences(text, max_chars=400)
+    index = build_index(chunks)
+    save = save_index(index, "./resources/index.json")
+
+print(answer("What does FocusEdge do?", index, top_k = 7))
+

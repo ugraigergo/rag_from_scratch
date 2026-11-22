@@ -121,3 +121,9 @@ def load_index(path:str):
     with open(path, encoding="utf-8") as f:
         data = json.load(f)
     return data
+
+import hashlib
+def file_fingerprint(path: str) -> str:
+    with open(path, "rb") as f:
+        data = f.read()
+    return hashlib.sha256(data).hexdigest()
