@@ -71,6 +71,7 @@ def generate(prompt: str)->str:
         "model": "llama3",
         "messages": [{"role": "user", "content": prompt}],
         "stream": False,
+        "options": {"temperature": 0},
     }
     response = requests.post(url, json=payload)
     response.raise_for_status()
