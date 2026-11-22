@@ -111,3 +111,13 @@ def chunk_by_sentences(text: str, max_chars: int = 400)->list[str]:
         chunks.append(current)
 
     return chunks
+
+import json
+def save_index(index, path:str)->None:
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(index, f)
+
+def load_index(path:str):
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+    return data
