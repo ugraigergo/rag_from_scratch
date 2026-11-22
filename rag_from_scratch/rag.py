@@ -95,3 +95,18 @@ import re
 def split_sentences(text: str)->list[str]:
     parts = re.split(r"(?<=[.!?])\s+", text)
     return [p.strip() for p in parts if p.strip()]
+
+def chunk_by_sentences(text: str, max_chars: int = 400)->list[str]:
+    sentences=split_sentences(text)
+    chunks = []
+    current = ""
+    for sentence in sentences:
+        if current and len(sentence) + len(current) > max_chars:
+            chunks.append(current)
+            current = sentence
+        else:
+            current = (current + " " + sentence).strip()
+    if current:
+        chunks.append(current)
+
+    return chunks
